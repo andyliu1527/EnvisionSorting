@@ -1,0 +1,30 @@
+{
+  "name": "sorting_algorithm",
+  "version": "1.0.0",
+  "description": "This is a sorting algorithm visualizer meant to help teach users sorting. The goal of the sorting visualizer is to give users a visual step by step respresenation of how a particular sorting algorithm will sort an unsorted array. Users will be able to adjust the speed, the number of elements, visually see the elements being sorted, as well as gain an understanding of a sorting algorithms efficientcy.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch --mode=development",
+    "build": "webpack --mode=production"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
+    "babel-loader": "^8.2.5",
+    "core-js": "^3.23.5",
+    "css-loader": "^6.7.1",
+    "mini-css-extract-plugin": "^2.6.1",
+    "regenerator-runtime": "^0.13.9",
+    "sass": "^1.53.0",
+    "sass-loader": "^13.0.2",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
