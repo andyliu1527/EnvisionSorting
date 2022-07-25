@@ -13,6 +13,7 @@ In EnvisionSorting users will be able to:
 In addition, this project will include:
 - A README.md
 - Instructions on how to use the project
+
 ## Wireframe
 ![alt text](/wireframe.png)
 https://wireframe.cc/y6U7jX
