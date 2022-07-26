@@ -21,7 +21,38 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const playBtn = document.getElementById("playBtn");
     playBtn.addEventListener("click", event => {
         event.preventDefault();
+        if (playBtn.innerHTML === "Play") {
+            playBtn.innerHTML = "Pause";
+        } else {
+            playBtn.innerHTML = "Play"
+        }
+
         const sortalgo = new BubbleSort(graph)
         sortalgo.bubblesort();
     })
+
+    // const bubbleSortBtn = document.getElementById("bubbleSortBtn")
+    // bubbleSortBtn.addEventListener("click", event => {
+    //     event.preventDefault();
+    //     bubbleSortBtn.classList.add("selected");
+    //     graph.reset(arrayNum)
+    //     let sortalgo = new BubbleSort(graph)
+    // })
+
+    // const mergeSortBtn = document.getElementById("mergeSortBtn")
+    // mergeSortBtn.addEventListener("click", event => {
+    //     event.preventDefault();
+    //     mergeSortBtn.classList.add("selected");
+    //     graph.reset(arrayNum)
+    //     let sortalgo = new mergeSortBtn(graph)
+    // })
+
+    // const quickSortBtn = document.getElementById("quickSortBtn")
+    // quickSortBtn.addEventListener("click", event => {
+    //     event.preventDefault();
+    //     quickSortBtn.classList.add("selected");
+    //     graph.reset(arrayNum)
+    //     let sortalgo = new QuickSort(graph)
+    // })
+    
 })

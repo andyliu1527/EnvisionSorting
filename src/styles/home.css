@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: grey;
     font-family: monospace;
     font-size: 20px;
 }
@@ -34,12 +34,14 @@ body {
     display: flex;
     /* transform: rotate(180deg) rotateY(180deg); */
     margin: 20px;
+    background-color: black;
     border: 3px solid black;
 }
 
 .bar {
-    margin: 1px;
-    background-color: rgb(79, 149, 149);
+    /* background-color: rgb(79, 149, 149); */
+    display: flex;
+    background-color: white;
 }
 
 .highlight {

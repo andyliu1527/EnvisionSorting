@@ -3,8 +3,8 @@ import Bar from "./bars"
 export default class SortingGraph {
     constructor(numBars) {
         this.sortingGraph = document.getElementById("sorting_graph");
-        this.sortingGraph.style.height = "700px";
-        this.sortingGraph.style.width = "700px";
+        this.sortingGraph.style.height = "600px";
+        this.sortingGraph.style.width = "1100px";
         this.elements = [];
         this.numBars = numBars;
 

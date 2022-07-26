@@ -20,7 +20,7 @@
 
 
     <div id="sorting_graph"></div>
-    <div id="sorting_info"><span id="steps">Steps: </span> <span id="iterations">Iterations: </span></div>
+    <div id="sorting_info">Steps: <span id="steps"></span> Iterations: <span id="iterations"></span></div>
 
 
 
@@ -36,8 +36,11 @@
         <label>Speed
           <input type="range" id="speed" name="speed" min="10" max="100" value="40">
         </label>
-        <button class="w3-btn w3-blue w3-hover-pale-yellow w3-round-large" id="playBtn">Play/Pause</button>
-        <button class="w3-btn w3-white w3-hover-pale-yellow w3-round-large">Bubble Sort</button>
+        <button class="w3-btn w3-blue w3-hover-pale-yellow w3-round-large" id="playBtn">Play</button>
+        <button class="w3-btn w3-white w3-hover-pale-yellow w3-round-large" id="bubbleSortBtn">Bubble Sort</button>
+        <button class="w3-btn w3-white w3-hover-pale-yellow w3-round-large" id="mergeSortBtn">Merge Sort</button>
+        <button class="w3-btn w3-white w3-hover-pale-yellow w3-round-large" id="quickSortBtn">Quick Sort</button>
+
       </form>
     </div>
   <script src="./dist/main.js"></script>

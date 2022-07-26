@@ -25,33 +25,37 @@ export default class Sort {
     }
 
     unhighlight(bar1, bar2) {
-        bar1.barDiv.style.backgroundColor="rgb(79, 149, 149)";
-        bar2.barDiv.style.backgroundColor="rgb(79, 149, 149)";
+        // bar1.barDiv.style.backgroundColor="rgb(79, 149, 149)";
+        // bar2.barDiv.style.backgroundColor="rgb(79, 149, 149)";
+        bar1.barDiv.style.backgroundColor= "white";
+        bar2.barDiv.style.backgroundColor="white";
     }
 
     swapBars(bar1, bar2) {
         let temp = bar1.value;
-        console.log("values")
-        console.log(bar1.value)
-        console.log(bar2.value)
+
         bar1.value = bar2.value;
         bar1.barDiv.innerHTML = bar2.value
 
         bar2.value = temp;
         bar2.barDiv.innerHTML = temp;
 
-        console.log("new values")
-        console.log(bar1.value)
-        console.log(bar2.value)
         bar1.barDiv.style.height = `${bar1.value}%`
         bar2.barDiv.style.height = `${bar2.value}%`
-        console.log("new heights")
-        console.log(`${bar1.value}%`)
-        console.log(`${bar2.value}%`)
+    }
+
+    updateSteps() {
+        const stepSpan = document.getElementById("steps");
+        stepSpan.innerHTML = this.steps;
+    }
+
+    updateIterations() {
+        const iterationsSpan = document.getElementById("iterations")
+        iterationsSpan.innerHTML = this.iterations;
     }
 
     sleep() {
-        return new Promise((resolve) => setTimeout(resolve, 50))
+        return new Promise((resolve) => setTimeout(resolve, 1))
     }
 }
 
