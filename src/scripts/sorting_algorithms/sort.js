@@ -8,42 +8,50 @@ export default class Sort {
 
     }
 
-    async compare(bar1, bar2) {
-        // this.highlight(bar1, bar2);
-        console.log(bar1.value);
-        console.log(bar2.value);
-        if (bar1.value > bar2.value) {
-            await this.sleep();
-            this.swapBars(bar1, bar2)
-            return true;
-        }
-    }
+    // async compare(bar1, bar2) {
+    //     // this.highlight(bar1, bar2);
+    //     console.log(bar1.value);
+    //     console.log(bar2.value);
+    //     if (bar1.value > bar2.value) {
+    //         await this.sleep();
+    //         this.swapBars(bar1, bar2)
+    //         return true;
+    //     }
+    // }
 
     highlight(bar1, bar2) {
         bar1.barDiv.style.backgroundColor="red";
-        bar2.barDiv.style.backgroundColor="blue";
+        bar2.barDiv.style.backgroundColor="red";
     }
 
-    unhighlight() {
-
+    unhighlight(bar1, bar2) {
+        bar1.barDiv.style.backgroundColor="rgb(79, 149, 149)";
+        bar2.barDiv.style.backgroundColor="rgb(79, 149, 149)";
     }
 
     swapBars(bar1, bar2) {
-        const temp = bar1.value;
-
+        let temp = bar1.value;
+        console.log("values")
+        console.log(bar1.value)
+        console.log(bar2.value)
         bar1.value = bar2.value;
         bar1.barDiv.innerHTML = bar2.value
 
         bar2.value = temp;
         bar2.barDiv.innerHTML = temp;
 
+        console.log("new values")
+        console.log(bar1.value)
+        console.log(bar2.value)
         bar1.barDiv.style.height = `${bar1.value}%`
         bar2.barDiv.style.height = `${bar2.value}%`
-
+        console.log("new heights")
+        console.log(`${bar1.value}%`)
+        console.log(`${bar2.value}%`)
     }
 
     sleep() {
-        return new Promise((resolve) => setTimeout(resolve, 1000))
+        return new Promise((resolve) => setTimeout(resolve, 50))
     }
 }
 

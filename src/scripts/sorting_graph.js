@@ -15,6 +15,7 @@ export default class SortingGraph {
 
     reset(numBars) {
         this.removeAllBars();
+        this.elements = [];
         console.log("resetting")
         for (let i =0; i < numBars; i++) {
             console.log("making bars")

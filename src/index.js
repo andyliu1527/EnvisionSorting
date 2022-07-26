@@ -7,7 +7,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const graph = new SortingGraph(5)
     console.log("bars made");
     console.log(graph.elements)
-    const sortalgo = new BubbleSort(graph)
 
     const arrayForm = document.getElementById("arraySize");
     arrayForm.addEventListener("submit", event => {
@@ -22,6 +21,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const playBtn = document.getElementById("playBtn");
     playBtn.addEventListener("click", event => {
         event.preventDefault();
+        const sortalgo = new BubbleSort(graph)
         sortalgo.bubblesort();
     })
 })
