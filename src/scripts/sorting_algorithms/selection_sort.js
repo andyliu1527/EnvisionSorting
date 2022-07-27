@@ -31,6 +31,7 @@ export default class SelectionSort extends Sort{
                 this.swapBars(this.elements[i], this.elements[min]);
             }
         }
+        this.finished();
     }
 
 }

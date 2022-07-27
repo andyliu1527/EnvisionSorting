@@ -28,5 +28,6 @@ export default class bubbleSort extends Sort{
                 this.updateIterations();
             }
         }
+        this.finished();
     }
 }

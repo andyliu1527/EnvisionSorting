@@ -18,7 +18,7 @@ body {
 
 #controllers {
     display: block;
-    border: 3px solid rgb(79, 149, 149);
+    /* border: 3px solid rgb(79, 149, 149); */
     height: 300px;
     width: 500px;
     margin: 100px;
@@ -31,6 +31,7 @@ body {
 #arrayController {
     display: flex;
     padding: 10px;
+    margin: 20px;
 }
 
 #sorting_graph {
@@ -54,7 +55,7 @@ body {
     display: flex;
     background-color: white;
     /* color: rgb(61, 255, 61); */
-    color: gray;
+    color: rgb(0, 200, 255);
 }
 
 .bar.highlight {
@@ -68,4 +69,8 @@ body {
     width:100%;
     height:100%;
     z-index:-1;
+}
+
+test {
+    color: rgb(50, 253, 50);
 }

@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     const graph = new SortingGraph(5)
     let currentAlgo;
-    let currentArraySize;
+    let currentArraySize = 5;
     let currentSpeed;
     console.log("bars made");
     console.log(graph.elements)
@@ -44,9 +44,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     bubbleSortBtn.addEventListener("click", event => {
         event.preventDefault();
         bubbleSortBtn.classList.add("selected");
-        const arrayNumInput = document.getElementById("arrayinput")
-        const arrayNum = arrayNumInput.value
-        currentArraySize = arrayNum;
         graph.reset(currentArraySize)
         let sortalgo = new BubbleSort(graph)
         currentAlgo = sortalgo.bubbleSort;

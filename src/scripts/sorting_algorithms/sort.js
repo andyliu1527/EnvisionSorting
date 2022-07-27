@@ -36,6 +36,12 @@ export default class Sort {
         bar2.barDiv.style.height = `${bar2.value}%`
     }
 
+    finished() {
+        this.elements.forEach(bar => {
+            bar.barDiv.style.backgroundColor="rgb(50, 253, 50)"
+        });
+    }
+
     updateSteps() {
         const stepSpan = document.getElementById("steps");
         stepSpan.innerHTML = this.steps;
@@ -47,6 +53,6 @@ export default class Sort {
     }
 
     sleep() {
-        return new Promise((resolve) => setTimeout(resolve, 200))
+        return new Promise((resolve) => setTimeout(resolve, 1))
     }
 }
