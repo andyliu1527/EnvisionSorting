@@ -12,4 +12,6 @@ export default class Bar {
         this.value = value;
         this.graph = graph;
     }
+
+    
 }

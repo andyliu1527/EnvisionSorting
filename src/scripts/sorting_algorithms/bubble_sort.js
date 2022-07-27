@@ -2,10 +2,11 @@ import Sort from "./sort";
 
 export default class bubbleSort extends Sort{
     constructor(graph) {
-        super(graph); // this.elements, this.steps, this.iterations
+        super(graph); // this.elements, this.steps, this.iterations, this.speed
+        this.bubbleSort = this.bubbleSort.bind(this);
     }
 
-    async bubblesort() {
+    async bubbleSort() {
         let sorted = false;
 
         while(!sorted) {
@@ -27,6 +28,5 @@ export default class bubbleSort extends Sort{
                 this.updateIterations();
             }
         }
-        console.log("finished");
     }
 }

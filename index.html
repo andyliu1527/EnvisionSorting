@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./dist/main.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>Envision Sorting</title>
   </head>
 
@@ -18,7 +21,7 @@
     </header>
     <h1 id="title">Envision Sorting</h1>
 
-
+    <canvas id="panningCanvas" style="border: 1px solid black;"></canvas>
     <div id="sorting_graph"></div>
     <div id="sorting_info">Steps: <span id="steps"></span> Iterations: <span id="iterations"></span></div>
 
@@ -28,18 +31,19 @@
       <div class="arrayController">
         <form id="arraySize">
           <label for="Array Size">Array Size:</label>
-          <input type="number" value="5" id="arrayinput">
+          <input type="number" value="5" min="5" max="50" id="arrayinput">
           <button class="w3-btn w3-blue w3-hover-pale-yellow w3-round-large" id="arraybtn">Generate New Array</button>
         </form>
     </div>
       <form>
         <label>Speed
-          <input type="range" id="speed" name="speed" min="10" max="100" value="40">
+          <input type="range" id="speedSlider" name="speed" min="10" max="100" value="40">
         </label>
         <button class="w3-btn w3-blue w3-hover-pale-yellow w3-round-large" id="playBtn">Play</button>
         <button class="w3-btn w3-white w3-hover-pale-yellow w3-round-large" id="bubbleSortBtn">Bubble Sort</button>
-        <button class="w3-btn w3-white w3-hover-pale-yellow w3-round-large" id="mergeSortBtn">Merge Sort</button>
-        <button class="w3-btn w3-white w3-hover-pale-yellow w3-round-large" id="quickSortBtn">Quick Sort</button>
+        <button class="w3-btn w3-white w3-hover-pale-yellow w3-round-large" id="selectionSortBtn">Selection Sort</button>
+        <!-- <button class="w3-btn w3-white w3-hover-pale-yellow w3-round-large" id="mergeSortBtn">Merge Sort</button>
+        <button class="w3-btn w3-white w3-hover-pale-yellow w3-round-large" id="quickSortBtn">Quick Sort</button> -->
 
       </form>
     </div>

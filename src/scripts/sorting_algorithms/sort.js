@@ -1,23 +1,15 @@
-
-
 export default class Sort {
     constructor(graph) {
         this.elements = graph.elements;
         this.steps = 0;
         this.iterations = 0;
+        // this.speed = speed;
 
     }
 
-    // async compare(bar1, bar2) {
-    //     // this.highlight(bar1, bar2);
-    //     console.log(bar1.value);
-    //     console.log(bar2.value);
-    //     if (bar1.value > bar2.value) {
-    //         await this.sleep();
-    //         this.swapBars(bar1, bar2)
-    //         return true;
-    //     }
-    // }
+    updateSpeed(speed) {
+        this.speed = speed;
+    }
 
     highlight(bar1, bar2) {
         bar1.barDiv.style.backgroundColor="red";
@@ -55,10 +47,6 @@ export default class Sort {
     }
 
     sleep() {
-        return new Promise((resolve) => setTimeout(resolve, 1))
+        return new Promise((resolve) => setTimeout(resolve, 200))
     }
 }
-
-// -compare 2 bars by checking their values
-// -highlight the bars being compared
-// - swap bar values values
