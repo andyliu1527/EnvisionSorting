@@ -11,6 +11,7 @@ export default class SortingGraph {
         this.reset(numBars);
 
         this.removeAllBars = this.removeAllBars.bind(this);
+        this.reset = this.reset.bind(this);
     }
 
     reset(numBars) {

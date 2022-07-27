@@ -1,61 +1,68 @@
 import SortingGraph from "./scripts/sorting_graph";
 import BubbleSort from "./scripts/sorting_algorithms/bubble_sort"
 import SelectionSort from "./scripts/sorting_algorithms/selection_sort"
+import Nav from "./scripts/nav/nav";
 
 window.addEventListener('DOMContentLoaded', (event) => {
     console.log("DOM fully loaded");
 
     const graph = new SortingGraph(5)
-    let currentAlgo;
-    let currentArraySize = 5;
-    let currentSpeed;
     console.log("bars made");
     console.log(graph.elements)
+    const nav = new Nav(graph, 1000, "bubblesort");
 
-    // const speedSlider = document.getElementById("speedSlider")
-    // speedSlider.addEventListener("input", event => {
-    //     currentSpeed = speedSlider.value;
-    //     sortalgo.updateSpeed(parseInt(speed));
-    // })
+    const speedSlider = document.getElementById("speedSlider")
+    speedSlider.addEventListener("input", event => {
+        nav.updateSpeed(parseInt(speedSlider.value));
+        // currentSpeed = speedSlider.value;
+        // sortalgo.updateSpeed(parseInt(currentSpeed));
+    })
 
-    const arrayForm = document.getElementById("arraySize");
-    arrayForm.addEventListener("submit", event => {
-        event.preventDefault();
-
-        const arrayNumInput = document.getElementById("arrayinput")
-        const arrayNum = arrayNumInput.value
-        currentArraySize = arrayNum;
-        console.log(arrayNum)
-        graph.reset(arrayNum)
+ 
+    const arraySize = document.getElementById("arraySize")
+    arraySize.addEventListener("input", event => {
+        nav.updateArraySize(arraySize.value);
+        // currentArraySize = arraySize.value;
+        // console.log(currentArraySize)
+        // graph.reset(currentArraySize)
     })
 
     const playBtn = document.getElementById("playBtn");
     playBtn.addEventListener("click", event => {
         event.preventDefault();
-        if (playBtn.innerHTML === "Play") {
-            playBtn.innerHTML = "Pause";
-        } else {
-            playBtn.innerHTML = "Play"
-        }
-        currentAlgo();
+        nav.handlePlayBtn();
+        // if (playBtn.innerHTML === "Play") {
+        //     playBtn.innerHTML = "Pause";
+        // } else {
+        //     playBtn.innerHTML = "Play"
+        // }
+        // currentAlgo();
+    })
+
+    const resetBtn = document.getElementById("resetBtn")
+    resetBtn.addEventListener("click", event => {
+        event.preventDefault();
+        nav.reset()
     })
 
     const bubbleSortBtn = document.getElementById("bubbleSortBtn")
     bubbleSortBtn.addEventListener("click", event => {
         event.preventDefault();
-        bubbleSortBtn.classList.add("selected");
-        graph.reset(currentArraySize)
-        let sortalgo = new BubbleSort(graph)
-        currentAlgo = sortalgo.bubbleSort;
+        nav.selectBubbleSort();
+        // graph.reset(currentArraySize)
+        // let algoKey = "bubblesort"
+        // let sortalgo = new BubbleSort(graph, currentSpeed)
+        // currentAlgo = sortalgo.bubbleSort;
     })
 
     const selectionSortBtn = document.getElementById("selectionSortBtn")
     selectionSortBtn.addEventListener("click", event => {
         event.preventDefault();
-        bubbleSortBtn.classList.add("selected");
-        graph.reset(currentArraySize)
-        let sortalgo = new SelectionSort(graph)
-        currentAlgo=sortalgo.selectionSort;
+        nav.selectSelectionSort();
+        // graph.reset(currentArraySize)
+        // let algoKey = "selectionsort"
+        // let sortalgo = new SelectionSort(graph, currentSpeed)
+        // currentAlgo=sortalgo.selectionSort;
     })
 
     // const mergeSortBtn = document.getElementById("mergeSortBtn")

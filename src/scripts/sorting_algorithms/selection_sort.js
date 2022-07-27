@@ -1,8 +1,8 @@
 import Sort from "./sort";
 
 export default class SelectionSort extends Sort{
-    constructor(graph) {
-        super(graph);
+    constructor(graph, speed) {
+        super(graph, speed);
         this.selectionSort = this.selectionSort.bind(this)
     }
 

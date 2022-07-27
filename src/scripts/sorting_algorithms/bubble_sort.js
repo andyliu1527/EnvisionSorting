@@ -1,8 +1,8 @@
 import Sort from "./sort";
 
 export default class bubbleSort extends Sort{
-    constructor(graph) {
-        super(graph); // this.elements, this.steps, this.iterations, this.speed
+    constructor(graph, speed) {
+        super(graph, speed); // this.elements, this.steps, this.iterations, this.speed
         this.bubbleSort = this.bubbleSort.bind(this);
     }
 
@@ -27,6 +27,7 @@ export default class bubbleSort extends Sort{
                 this.updateSteps();
                 this.updateIterations();
             }
+
         }
         this.finished();
     }

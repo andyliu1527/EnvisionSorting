@@ -1,9 +1,9 @@
 export default class Sort {
-    constructor(graph) {
+    constructor(graph, speed) {
         this.elements = graph.elements;
         this.steps = 0;
         this.iterations = 0;
-        // this.speed = speed;
+        this.speed = speed;
 
     }
 
@@ -53,6 +53,7 @@ export default class Sort {
     }
 
     sleep() {
-        return new Promise((resolve) => setTimeout(resolve, 1))
+        console.log(this.speed)
+        return new Promise((resolve) => setTimeout(resolve, this.speed))
     }
 }
