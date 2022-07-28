@@ -60,7 +60,7 @@ export default class Sort {
     }
 
     sleep() {
-        return new Promise((resolve) => setTimeout(resolve, this.speed))
+        return new Promise((resolve) => setTimeout(resolve, (1001 - this.speed)))
     }
     
 }

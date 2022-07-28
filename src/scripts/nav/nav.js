@@ -8,8 +8,11 @@ export default class Nav {
         this.graph = graph;
         this.speed = speed;
         this.algo = algo;
+        this.displayCurrentAlgo();
         this.sorter = new BubbleSort(this.graph, this.speed)
         this.sorter.describeBubbleSort();
+        this.sorter.updateSteps();
+        this.sorter.updateIterations();
         this.arraySize = 5;
         this.isSorting = false;
     }
@@ -35,6 +38,8 @@ export default class Nav {
         this.sorter.forceQuit = true;
         this.sorter.steps = 0;
         this.sorter.iterations = 0;
+        this.sorter.updateSteps();
+        this.sorter.updateIterations();
         this.updatePlayBtn();
     }
 
@@ -57,6 +62,7 @@ export default class Nav {
         // this.forceQuit();
         this.reset();
         this.algo = "bubblesort";
+        this.displayCurrentAlgo();
         this.sorter = new BubbleSort(this.graph, this.speed);
         this.sorter.describeBubbleSort();
     }
@@ -65,12 +71,18 @@ export default class Nav {
         // this.forceQuit();
         this.reset();
         this.algo = "selectionsort"
+        this.displayCurrentAlgo();
         this.sorter = new SelectionSort(this.graph, this.speed)
         this.sorter.describeSelectionSort();
     }
 
     forceQuit() {
         this.sorter.forceQuit = true;
+    }
+
+    displayCurrentAlgo() {
+        let algoSpan = document.getElementById("currentAlgo")
+        algoSpan.innerHTML = this.algo;
     }
 
     

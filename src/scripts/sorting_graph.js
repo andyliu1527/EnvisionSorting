@@ -3,7 +3,7 @@ import Bar from "./bars"
 export default class SortingGraph {
     constructor(numBars) {
         this.sortingGraph = document.getElementById("sorting_graph");
-        this.sortingGraph.style.height = "600px";
+        this.sortingGraph.style.height = "400px";
         this.sortingGraph.style.width = "1100px";
         this.elements = [];
         this.numBars = numBars;
@@ -20,7 +20,7 @@ export default class SortingGraph {
         console.log("resetting")
         for (let i =0; i < numBars; i++) {
             console.log("making bars")
-            let height = Math.floor(Math.random() * 100);
+            let height = Math.floor(Math.random() * (101 - 5) + 5);
             let width = (1/numBars * 100)
 
             this.elements.push(new Bar(height, width, this.sortingGraph))
