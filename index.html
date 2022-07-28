@@ -7,16 +7,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./dist/main.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/computer-icon" href="./src/styles/favicon.ico">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/135a05107c.js" crossorigin="anonymous"></script>
     <title>Envision Sorting</title>
   </head>
 
   <body>
     <header>
       <div class="navbar">
-        <a href="https://github.com/andyliu1527">GitHub</a>
+        <div class="social">
+          <a href="https://github.com/andyliu1527" target="_blank"><i class="fa-brands fa-github fa-3x"></i></a>
+        </div>
+        <div class="social">
+          <a href="https://www.linkedin.com/in/andy-liu-9b2a65159/" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+        </div>
       </div>
     </header>
     <h1 id="title">Envision Sorting</h1>
@@ -26,7 +33,7 @@
 
     <div id="sorting_graph"></div>
     <div id="sorting_info">Current Algorithm: <span id="currentAlgo"></span> Steps: <span id="steps"></span> Iterations: <span id="iterations"></span></div>
-
+    <div id="legend"> Legend: <div id="redbox"></div> Comparing <div id="yellowbox"></div> Swapping <div id="greenbox"></div> Completed</div>
 
 
     <div id= "navContainer">

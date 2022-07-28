@@ -32,6 +32,7 @@ export default class SelectionSort extends Sort{
                 this.swapHighlight(this.elements[i], this.elements[min])
                 await this.sleep();
                 this.swapBars(this.elements[i], this.elements[min]);
+                await this.sleep();
                 this.unhighlight(this.elements[i], this.elements[min])
             }
         }

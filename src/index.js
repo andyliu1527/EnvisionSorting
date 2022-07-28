@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const graph = new SortingGraph(5)
     console.log("bars made");
     console.log(graph.elements)
-    const nav = new Nav(graph, 1000, "bubblesort");
+    const nav = new Nav(graph, 500, "Bubble Sort");
 
     const speedSlider = document.getElementById("speedSlider")
     speedSlider.addEventListener("input", event => {

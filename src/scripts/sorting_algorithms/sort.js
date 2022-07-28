@@ -7,6 +7,7 @@ export default class Sort {
         this.isSorting = false;
         this.forceQuit = false;
         this.pause = false;
+        this.sorted = false;
 
     }
 

@@ -16,14 +16,11 @@ In addition, this project will include:
 
 ## Wireframe
 ![alt text](/wireframe.png)
-https://wireframe.cc/y6U7jX
 
 ## Technologies, Libraries, APIs
 - HTML
-- Javascript
+- JavaScript
 - SCSS
-- D3.js
-- Three.js
 
 ## Bonus Features
 - Stepping feature so users can better understand what the sorting algorithm is doing

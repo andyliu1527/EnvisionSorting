@@ -18,13 +18,13 @@ export default class Nav {
     }
 
     async handlePlayBtn() {
-        if (this.algo === "bubblesort" && this.isSorting === false) {
+        if (this.algo === "Bubble Sort" && this.isSorting === false) {
             this.sorter = new BubbleSort(this.graph, this.speed)
             this.isSorting = true;
             await this.sorter.bubbleSort();
             this.isSorting = false;
             this.updatePlayBtn();
-        } else if (this.algo === "selectionsort" && this.isSorting === false) {
+        } else if (this.algo === "Selection Sort" && this.isSorting === false) {
             this.sorter = new SelectionSort(this.graph, this.speed)
             this.isSorting = true;  
             await this.sorter.selectionSort();
@@ -61,7 +61,7 @@ export default class Nav {
     selectBubbleSort() {
         // this.forceQuit();
         this.reset();
-        this.algo = "bubblesort";
+        this.algo = "Bubble Sort";
         this.displayCurrentAlgo();
         this.sorter = new BubbleSort(this.graph, this.speed);
         this.sorter.describeBubbleSort();
@@ -70,7 +70,7 @@ export default class Nav {
     selectSelectionSort() {
         // this.forceQuit();
         this.reset();
-        this.algo = "selectionsort"
+        this.algo = "Selection Sort"
         this.displayCurrentAlgo();
         this.sorter = new SelectionSort(this.graph, this.speed)
         this.sorter.describeSelectionSort();
