@@ -23,9 +23,12 @@ export default class Sort {
         bar2.barDiv.style.backgroundColor="red";
     }
 
+    swapHighlight(bar1, bar2) {
+        bar1.barDiv.style.backgroundColor="yellow";
+        bar2.barDiv.style.backgroundColor="yellow";
+    }
+
     unhighlight(bar1, bar2) {
-        // bar1.barDiv.style.backgroundColor="rgb(79, 149, 149)";
-        // bar2.barDiv.style.backgroundColor="rgb(79, 149, 149)";
         bar1.barDiv.style.backgroundColor= "white";
         bar2.barDiv.style.backgroundColor="white";
     }

@@ -22,6 +22,7 @@ export default class bubbleSort extends Sort{
 
                 if (this.elements[i].value > this.elements[i + 1].value) {
                     await this.sleep();
+                    this.swapHighlight(this.elements[i], this.elements[i + 1])
                     this.swapBars(this.elements[i], this.elements[i + 1]);
                     sorted = false;
                 }

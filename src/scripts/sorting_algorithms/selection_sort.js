@@ -28,9 +28,11 @@ export default class SelectionSort extends Sort{
                 }
 
             }
-            await this.sleep();
             if (min != i) {
+                this.swapHighlight(this.elements[i], this.elements[min])
+                await this.sleep();
                 this.swapBars(this.elements[i], this.elements[min]);
+                this.unhighlight(this.elements[i], this.elements[min])
             }
         }
         this.finished();
