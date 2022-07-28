@@ -31,11 +31,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     playBtn.addEventListener("click", event => {
         event.preventDefault();
         nav.handlePlayBtn();
-        // if (playBtn.innerHTML === "Play") {
-        //     playBtn.innerHTML = "Pause";
-        // } else {
-        //     playBtn.innerHTML = "Play"
-        // }
+        if (playBtn.innerHTML === "Play") {
+            playBtn.innerHTML = "Pause";
+            nav.pause();
+        } else {
+            playBtn.innerHTML = "Play"
+        }
         // currentAlgo();
     })
 

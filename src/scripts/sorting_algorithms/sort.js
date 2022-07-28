@@ -4,7 +4,14 @@ export default class Sort {
         this.steps = 0;
         this.iterations = 0;
         this.speed = speed;
+        this.isSorting = false;
+        this.forceQuit = false;
+        this.pause = false;
 
+    }
+
+    forceQuit() {
+        this.forceQuit = true;
     }
 
     updateSpeed(speed) {
@@ -56,4 +63,5 @@ export default class Sort {
         console.log(this.speed)
         return new Promise((resolve) => setTimeout(resolve, this.speed))
     }
+    
 }

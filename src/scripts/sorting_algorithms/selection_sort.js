@@ -14,7 +14,9 @@ export default class SelectionSort extends Sort{
             this.updateIterations();
 
             for (let j = i + 1; j < this.elements.length; j++) {
-
+                if (this.forceQuit === true) {
+                    return;
+                }
                 this.steps++;
                 this.updateSteps();
                 this.highlight(this.elements[min], this.elements[j])

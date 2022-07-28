@@ -8,24 +8,31 @@ export default class Nav {
         this.graph = graph;
         this.speed = speed;
         this.algo = algo;
+        this.sorter = new BubbleSort(this.graph, this.speed)
         this.arraySize = 5;
         this.isSorting = false;
     }
 
-    handlePlayBtn() {
+    async handlePlayBtn() {
         if (this.algo === "bubblesort" && this.isSorting === false) {
             this.sorter = new BubbleSort(this.graph, this.speed)
-            this.sorter.bubbleSort();
             this.isSorting = true;
+            await this.sorter.bubbleSort();
         } else if (this.algo === "selectionsort" && this.isSorting === false) {
             this.sorter = new SelectionSort(this.graph, this.speed)
-            this.sorter.selectionSort();
             this.isSorting = true;  
+            await this.sorter.selectionSort();
         }
+        this.isSorting = false;
+    }
+
+    pause() {
+        
     }
 
     reset() {
         this.graph.reset(this.arraySize);
+        this.sorter.forceQuit = true;
     }
 
     updateSpeed(speed) {
@@ -36,6 +43,7 @@ export default class Nav {
     updateArraySize(arraySize) {
         this.arraySize = arraySize;
         this.graph.reset(arraySize);
+        this.sorter.forceQuit = true;
     }
 
     selectBubbleSort() {

@@ -7,12 +7,16 @@ export default class bubbleSort extends Sort{
     }
 
     async bubbleSort() {
+        this.isSorting = true;
         let sorted = false;
 
         while(!sorted) {
             sorted = true;
             this.iterations++;
             for (let i = 0; i < this.elements.length - 1; i++) {
+                if (this.forceQuit === true) {
+                    return;
+                }
                 this.steps++;
                 this.highlight(this.elements[i], this.elements[i + 1])
 
@@ -30,5 +34,9 @@ export default class bubbleSort extends Sort{
 
         }
         this.finished();
+    }
+
+    description() {
+
     }
 }
