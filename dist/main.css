@@ -19,21 +19,21 @@ body {
     color: white;
 }
 
-#controllers {
-    display: block;
-    /* border: 3px solid rgb(79, 149, 149); */
+#navContainer {
+    display: flex;
+    border: 3px solid rgb(79, 149, 149);
     height: 300px;
-    width: 500px;
-    margin: 100px;
+    width: 600px;
+    margin: 10px;
     padding: 20px;
     color: white;
 
-    /* right:0; */
 }
 
 #arrayController {
     display: flex;
-    padding: 10px;
+    border: 3px solid white;
+    padding: 100px;
     margin: 20px;
 }
 
@@ -74,7 +74,7 @@ body {
     z-index:-1;
 }
 
-test {
+.button.selected {
     color: rgb(50, 253, 50);
 }
 /*!*************************************************************************************************************************************!*\

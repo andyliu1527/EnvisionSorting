@@ -22,30 +22,30 @@
     <h1 id="title">Envision Sorting</h1>
 
     <canvas id="panningCanvas" style="border: 1px solid black;"></canvas>
+
+
     <div id="sorting_graph"></div>
     <div id="sorting_info">Steps: <span id="steps"></span> Iterations: <span id="iterations"></span></div>
 
 
 
-    <div id= "controllers">
+    <div id= "navContainer">
       <div class="arrayController">
-          <label for="Array Size">Array Size:</label>
-          <input type="number" value="5" min="5" max="50" id="arraySize">
-          <!-- <button class="w3-btn w3-blue w3-hover-pale-yellow w3-round-large" id="arraybtn">Generate New Array</button> -->
-      </div>
-      <form>
-        <label>Speed
+          <label>Array Size:</label>
+          <input type="number" value="5" min="5" max="50" id="arraySize" onKeyDown="return false">
+          <label>Speed</label>
           <input type="range" id="speedSlider" name="speed" min="1" max="2000" value="1000">
-        </label>
-        <button class="w3-btn w3-blue w3-hover-pale-yellow w3-round-large" id="playBtn">Play</button>
-        <button class="w3-btn w3-blue w3-hover-pale-yellow w3-round-large" id="resetBtn">Reset</button>
+          <button class="w3-btn w3-blue w3-hover-pale-yellow w3-round-large" id="playBtn">Play</button>
+          <button class="w3-btn w3-blue w3-hover-pale-yellow w3-round-large" id="resetBtn">Reset</button>
+      </div>
+      <div id="sortContainer">
         <button class="w3-btn w3-white w3-hover-pale-yellow w3-round-large" id="bubbleSortBtn">Bubble Sort</button>
         <button class="w3-btn w3-white w3-hover-pale-yellow w3-round-large" id="selectionSortBtn">Selection Sort</button>
         <!-- <button class="w3-btn w3-white w3-hover-pale-yellow w3-round-large" id="mergeSortBtn">Merge Sort</button>
         <button class="w3-btn w3-white w3-hover-pale-yellow w3-round-large" id="quickSortBtn">Quick Sort</button> -->
-      </form>
+      </div>
     </div>
-    <div></div>
+    <div id="description"></div>
   <script src="./dist/main.js"></script>
   </body>
 

@@ -2,6 +2,7 @@ import SortingGraph from "./scripts/sorting_graph";
 import BubbleSort from "./scripts/sorting_algorithms/bubble_sort"
 import SelectionSort from "./scripts/sorting_algorithms/selection_sort"
 import Nav from "./scripts/nav/nav";
+import bubbleSort from "./scripts/sorting_algorithms/bubble_sort";
 
 window.addEventListener('DOMContentLoaded', (event) => {
     console.log("DOM fully loaded");
@@ -14,17 +15,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const speedSlider = document.getElementById("speedSlider")
     speedSlider.addEventListener("input", event => {
         nav.updateSpeed(parseInt(speedSlider.value));
-        // currentSpeed = speedSlider.value;
-        // sortalgo.updateSpeed(parseInt(currentSpeed));
     })
 
  
     const arraySize = document.getElementById("arraySize")
     arraySize.addEventListener("input", event => {
         nav.updateArraySize(arraySize.value);
-        // currentArraySize = arraySize.value;
-        // console.log(currentArraySize)
-        // graph.reset(currentArraySize)
     })
 
     const playBtn = document.getElementById("playBtn");
@@ -32,12 +28,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
         event.preventDefault();
         nav.handlePlayBtn();
         if (playBtn.innerHTML === "Play") {
-            playBtn.innerHTML = "Pause";
-            nav.pause();
+            playBtn.innerHTML = "Stop";
         } else {
             playBtn.innerHTML = "Play"
+            nav.forceQuit();
         }
-        // currentAlgo();
+
     })
 
     const resetBtn = document.getElementById("resetBtn")
@@ -50,20 +46,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     bubbleSortBtn.addEventListener("click", event => {
         event.preventDefault();
         nav.selectBubbleSort();
-        // graph.reset(currentArraySize)
-        // let algoKey = "bubblesort"
-        // let sortalgo = new BubbleSort(graph, currentSpeed)
-        // currentAlgo = sortalgo.bubbleSort;
     })
 
     const selectionSortBtn = document.getElementById("selectionSortBtn")
     selectionSortBtn.addEventListener("click", event => {
         event.preventDefault();
         nav.selectSelectionSort();
-        // graph.reset(currentArraySize)
-        // let algoKey = "selectionsort"
-        // let sortalgo = new SelectionSort(graph, currentSpeed)
-        // currentAlgo=sortalgo.selectionSort;
     })
 
     // const mergeSortBtn = document.getElementById("mergeSortBtn")

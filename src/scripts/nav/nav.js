@@ -18,21 +18,24 @@ export default class Nav {
             this.sorter = new BubbleSort(this.graph, this.speed)
             this.isSorting = true;
             await this.sorter.bubbleSort();
+            this.isSorting = false;
         } else if (this.algo === "selectionsort" && this.isSorting === false) {
             this.sorter = new SelectionSort(this.graph, this.speed)
             this.isSorting = true;  
             await this.sorter.selectionSort();
+            this.isSorting = false;
         }
-        this.isSorting = false;
-    }
-
-    pause() {
-        
+        let playBtn = document.getElementById("playBtn");
+        playBtn.innerHTML = "Play";
     }
 
     reset() {
         this.graph.reset(this.arraySize);
         this.sorter.forceQuit = true;
+        this.sorter.steps = 0;
+        this.sorter.iterations = 0;
+        let playBtn = document.getElementById("playBtn");
+        playBtn.innerHTML = "Play";
     }
 
     updateSpeed(speed) {
@@ -42,7 +45,7 @@ export default class Nav {
 
     updateArraySize(arraySize) {
         this.arraySize = arraySize;
-        this.graph.reset(arraySize);
+        this.reset();
         this.sorter.forceQuit = true;
     }
 
@@ -52,6 +55,10 @@ export default class Nav {
 
     selectSelectionSort() {
         this.algo = "selectionsort"
+    }
+
+    forceQuit() {
+        this.sorter.forceQuit = true;
     }
 
     
