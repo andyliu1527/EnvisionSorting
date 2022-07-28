@@ -36,4 +36,8 @@ export default class SelectionSort extends Sort{
         this.finished();
     }
 
+    describeSelectionSort() {
+        let description = document.getElementById("describe")
+        description.innerHTML = "Selection sort is a simple sorting algorithm uses a pair of nested for loops, keeping track of a 'sorted array' and the unsorted array. For every iteration of the out for loop, selection sort will look for the next smallest element and append it to the beginning of the 'sorted array'."
+    }
 }

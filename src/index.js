@@ -30,8 +30,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
         if (playBtn.innerHTML === "Play") {
             playBtn.innerHTML = "Stop";
         } else {
-            playBtn.innerHTML = "Play"
             nav.forceQuit();
+            playBtn.innerHTML = "Play"
         }
 
     })

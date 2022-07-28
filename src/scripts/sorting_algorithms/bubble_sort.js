@@ -36,7 +36,8 @@ export default class bubbleSort extends Sort{
         this.finished();
     }
 
-    description() {
-
+    describeBubbleSort() {
+        let description = document.getElementById("describe")
+        description.innerHTML = "Bubble sort is one of the simpliest sorting algorithms to implement. Bubble sort sorts by iterating through the whole array, checking adjacent elements and 'bubble up' the largest value to the end of the array. Repeating the process until the array is sorted.";
     }
 }

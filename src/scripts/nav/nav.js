@@ -9,6 +9,7 @@ export default class Nav {
         this.speed = speed;
         this.algo = algo;
         this.sorter = new BubbleSort(this.graph, this.speed)
+        this.sorter.describeBubbleSort();
         this.arraySize = 5;
         this.isSorting = false;
     }
@@ -19,14 +20,14 @@ export default class Nav {
             this.isSorting = true;
             await this.sorter.bubbleSort();
             this.isSorting = false;
+            this.updatePlayBtn();
         } else if (this.algo === "selectionsort" && this.isSorting === false) {
             this.sorter = new SelectionSort(this.graph, this.speed)
             this.isSorting = true;  
             await this.sorter.selectionSort();
             this.isSorting = false;
+            this.updatePlayBtn();
         }
-        let playBtn = document.getElementById("playBtn");
-        playBtn.innerHTML = "Play";
     }
 
     reset() {
@@ -34,8 +35,7 @@ export default class Nav {
         this.sorter.forceQuit = true;
         this.sorter.steps = 0;
         this.sorter.iterations = 0;
-        let playBtn = document.getElementById("playBtn");
-        playBtn.innerHTML = "Play";
+        this.updatePlayBtn();
     }
 
     updateSpeed(speed) {
@@ -49,12 +49,22 @@ export default class Nav {
         this.sorter.forceQuit = true;
     }
 
+    updatePlayBtn() {
+        let playBtn = document.getElementById("playBtn");
+        playBtn.innerHTML = "Play";
+    }
     selectBubbleSort() {
         this.algo = "bubblesort";
+        this.sorter = new BubbleSort(this.graph, this.speed);
+        this.reset();
+        this.sorter.describeBubbleSort();
     }
 
     selectSelectionSort() {
         this.algo = "selectionsort"
+        this.sorter = new SelectionSort(this.graph, this.speed)
+        this.reset();
+        this.sorter.describeSelectionSort();
     }
 
     forceQuit() {

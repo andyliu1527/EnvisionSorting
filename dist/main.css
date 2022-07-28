@@ -21,20 +21,24 @@ body {
 
 #navContainer {
     display: flex;
-    border: 3px solid rgb(79, 149, 149);
-    height: 300px;
-    width: 600px;
-    margin: 10px;
+    flex-direction: column;
+    font-family: 'Press Start 2P', cursive;
+    /* height: 200px;
+    width: 400px; */
+    margin: auto;
     padding: 20px;
     color: white;
+    align-items: center;
+    justify-content: center;
 
 }
 
 #arrayController {
     display: flex;
-    border: 3px solid white;
-    padding: 100px;
-    margin: 20px;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
 }
 
 #sorting_graph {
@@ -51,6 +55,20 @@ body {
     color: white;
     font-family: 'Press Start 2P', cursive;
     text-align: center;
+    margin: 10px;
+}
+
+#description{
+    margin : auto;
+    padding: 10px;
+    border: 3px solid white;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+}
+
+#describe {
+    font-family: 'Press Start 2P', cursive;
+    color: white;
 }
 
 .bar {
