@@ -54,16 +54,18 @@ export default class Nav {
         playBtn.innerHTML = "Play";
     }
     selectBubbleSort() {
+        // this.forceQuit();
+        this.reset();
         this.algo = "bubblesort";
         this.sorter = new BubbleSort(this.graph, this.speed);
-        this.reset();
         this.sorter.describeBubbleSort();
     }
 
     selectSelectionSort() {
+        // this.forceQuit();
+        this.reset();
         this.algo = "selectionsort"
         this.sorter = new SelectionSort(this.graph, this.speed)
-        this.reset();
         this.sorter.describeSelectionSort();
     }
 

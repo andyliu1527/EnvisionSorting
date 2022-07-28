@@ -33,7 +33,7 @@ body {
 #arrayController {
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin: 10px;
     align-items: center;
     justify-content: center;
 }
@@ -72,6 +72,7 @@ body {
     /* background-color: rgb(79, 149, 149); */
     display: flex;
     background-color: white;
+    border: 1px solid gray;
     /* color: rgb(61, 255, 61); */
     color: rgb(0, 200, 255);
 }
